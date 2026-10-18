@@ -49,13 +49,16 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;text
 .brand{display:flex;align-items:center;gap:.6em}
 .brand:has(.logo) .home::before{content:none}
 .logo-link{display:block;flex:0 0 auto;line-height:0}
-.logo{display:block;width:48px;height:48px;max-width:100%}
+.logo{display:block;width:158px;height:158px;max-width:none}
+/* Same rendered size as the source site header: 158px, 60px at 767px and below */
+@media (max-width:767px){
+  .logo{width:60px;height:60px}
+}
 .orig{margin:-.8em 0 1.6em}
 .orig a{display:inline-block;padding:7px 14px;border:1px solid var(--accent);border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;background:var(--card)}
 .orig a:hover{background:var(--accent);color:#fff}
 figure.diagram{margin:0 auto 1.6em;max-width:34rem;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px}
 figure.diagram img{display:block;max-width:100%;height:auto;margin:0 auto}
 @media (max-width:520px){
-  .logo{width:40px;height:40px}
   figure.diagram{padding:6px}
 }
